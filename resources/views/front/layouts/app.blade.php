@@ -34,6 +34,7 @@
 
     <link rel="stylesheet" type="text/css" href="{{asset('front-assets/css/slick.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{asset('front-assets/css/slick-theme.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('front-assets/css/ion.rangeSlider.min.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{asset('front-assets/css/style.css') }}" />
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -51,7 +52,7 @@
         <div class="container">
             <div class="row align-items-center py-3 d-none d-lg-flex justify-content-between">
                 <div class="col-lg-4 logo">
-                    <a href="index.php" class="text-decoration-none">
+                    <a href="{{ route('front.home') }}" class="text-decoration-none">
                         <span class="h1 text-uppercase text-primary bg-dark px-2">FerMet</span>
                         <span class="h1 text-uppercase text-dark bg-primary px-2 ml-n1">SHOP</span>
                     </a>
@@ -158,7 +159,7 @@
         </div>
     </header>
     <main>
-    @yield('content')
+        @yield('content')
     </main>
     <footer class="bg-dark mt-5">
         <div class="container pb-5 pt-3">
@@ -215,6 +216,7 @@
     <script src="{{asset('front-assets/js/instantpages.5.1.0.min.js') }}"></script>
     <script src="{{asset('front-assets/js/lazyload.17.6.0.min.js') }}"></script>
     <script src="{{asset('front-assets/js/slick.min.js') }}"></script>
+    <script src="{{asset('front-assets/js/ion.rangeSlider.min.js') }}"></script>
     <script src="{{asset('front-assets/js/custom.js') }}"></script>
     <script>
         window.onscroll = function() {
@@ -232,6 +234,8 @@
             }
         }
     </script>
+    @yield('customJs')
+
 </body>
 
 </html>
